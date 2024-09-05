@@ -4,8 +4,7 @@ import { Box } from "@mui/material";
 
 function Home() {
   return (
-    <Box
-      sx={{
+      <Box sx={{
         height: "100vh", 
         overflowY: "auto", 
         background: `linear-gradient(to right, rgba(127, 126, 126, 0.1) 1px, transparent 1px),
@@ -14,8 +13,7 @@ function Home() {
         backgroundSize: "40px 40px",
         padding: "20px",
         marginTop: "64px",
-      }}
-    >
+      }}>
       <Name />
       <ToastContainer />
     </Box>
