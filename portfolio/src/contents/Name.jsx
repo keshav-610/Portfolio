@@ -62,8 +62,13 @@ const Name = () => {
         justifyContent: "space-around",
         alignItems: "center",
         flexDirection: { xs: "column", sm: "row" }, 
+<<<<<<< HEAD
         padding: "20px", 
         boxSizing: "border-box", 
+=======
+        padding: "20px", // Add padding to ensure content is not too close to the edges
+        boxSizing: "border-box", // Include padding in width and height calculations
+>>>>>>> b0a83d7c666118d02c710ea10b9e6bc7a9846eda
       }}
     >
       <Box
@@ -72,7 +77,11 @@ const Name = () => {
           flexDirection: "column",
           alignItems: "center",
           textAlign: "center",
+<<<<<<< HEAD
           marginBottom: { xs: "20px", sm: "0" }, 
+=======
+          marginBottom: { xs: "20px", sm: "0" }, // Add margin for mobile
+>>>>>>> b0a83d7c666118d02c710ea10b9e6bc7a9846eda
         }}
       >
         <Typography
