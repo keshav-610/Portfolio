@@ -62,8 +62,8 @@ const Name = () => {
         justifyContent: "space-around",
         alignItems: "center",
         flexDirection: { xs: "column", sm: "row" }, 
-        padding: "20px", // Add padding to ensure content is not too close to the edges
-        boxSizing: "border-box", // Include padding in width and height calculations
+        padding: "20px", 
+        boxSizing: "border-box", 
       }}
     >
       <Box
@@ -72,7 +72,7 @@ const Name = () => {
           flexDirection: "column",
           alignItems: "center",
           textAlign: "center",
-          marginBottom: { xs: "20px", sm: "0" }, // Add margin for mobile
+          marginBottom: { xs: "20px", sm: "0" }, 
         }}
       >
         <Typography
