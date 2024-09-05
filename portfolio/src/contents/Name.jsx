@@ -1,15 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { Button, Typography, Box } from "@mui/material";
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; 
-import IMG_20240905_190702 from '../assets/IMG_20240905_190702.jpg';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import IMG_20240905_190702 from "../assets/IMG_20240905_190702.jpg";
 
 const Name = () => {
   const cheers_function = () => {
     toast("Cheers");
   };
 
-  const name_sentences = ["A.K.A Kesava Prakash", "Final Year Student at Vel Tech"];
+  const name_sentences = [
+    "A.K.A Kesava Prakash",
+    "Final Year Student at Vel Tech",
+  ];
   const [displayed_text, set_displayed_text] = useState("");
   const [sentence_index, set_sentence_index] = useState(0);
   const [char_index, set_char_index] = useState(0);
@@ -20,7 +23,9 @@ const Name = () => {
       if (typing) {
         if (char_index < name_sentences[sentence_index].length) {
           const time_out = setTimeout(() => {
-            set_displayed_text((prev) => prev + name_sentences[sentence_index][char_index]);
+            set_displayed_text(
+              (prev) => prev + name_sentences[sentence_index][char_index]
+            );
             set_char_index(char_index + 1);
           }, 20);
           return () => clearTimeout(time_out);
@@ -39,7 +44,9 @@ const Name = () => {
           return () => clearTimeout(time_out);
         } else {
           const pause_timeout = setTimeout(() => {
-            set_sentence_index((prevIndex) => (prevIndex + 1) % name_sentences.length);
+            set_sentence_index(
+              (prevIndex) => (prevIndex + 1) % name_sentences.length
+            );
             setTyping(true);
           }, 500);
           return () => clearTimeout(pause_timeout);
@@ -49,62 +56,89 @@ const Name = () => {
   }, [char_index, typing, sentence_index]);
 
   return (
-    <div>
-      <Box>
-      <Typography
-        variant="h4"
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "space-around",
+        alignItems: "center",
+        flexDirection: { xs: "column", sm: "row" }, 
+        padding: "20px", // Add padding to ensure content is not too close to the edges
+        boxSizing: "border-box", // Include padding in width and height calculations
+      }}
+    >
+      <Box
         sx={{
-          fontFamily: '"Roboto", "Arial", sans-serif',
-          fontWeight: "bold", 
-          color: "white",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          textAlign: "center",
+          marginBottom: { xs: "20px", sm: "0" }, // Add margin for mobile
         }}
       >
-        Hello,
-      </Typography>
-      <Typography
-        variant="h1"
-        sx={{
-          fontFamily: '"Montserrat", sans-serif',
-          fontWeight: "bold",
-          color: "white",
-        }}
-      >
-        I'm <span style={{ color: "yellow" }}>Keshav</span>
-      </Typography>
-      <Typography
-        variant="h5"
-        sx={{
-          color: "white",
-          fontFamily: 'sans-serif',
-          fontWeight: "bold", 
-          minHeight: "1.5em", 
-          fontSize: {
-            xs: "1.4em",
-            sm: "inherit"
-          }
-        }}
-      >
-        {displayed_text.includes("Kesava Prakash") ? (
-          <>
-            A.K.A <span style={{ color: "cyan" }}>{displayed_text.slice(6)}</span>
-          </>
-        ) : (
-          displayed_text
-        )}
-      </Typography>
-      <Box>
-        <Button variant="outlined" onClick={cheers_function}>CHEERS</Button>
+        <Typography
+          variant="h4"
+          sx={{
+            fontFamily: '"Roboto", "Arial", sans-serif',
+            fontWeight: "bold",
+            color: "white",
+          }}
+        >
+          Hello,
+        </Typography>
+        <Typography
+          variant="h1"
+          sx={{
+            fontFamily: '"Montserrat", sans-serif',
+            fontWeight: "bold",
+            color: "white",
+          }}
+        >
+          I'm <span style={{ color: "yellow" }}>Keshav</span>
+        </Typography>
+        <Typography
+          variant="h5"
+          sx={{
+            color: "white",
+            fontFamily: "sans-serif",
+            fontWeight: "bold",
+            minHeight: "1.5em",
+            fontSize: {
+              xs: "1.4em",
+              sm: "inherit",
+            },
+          }}
+        >
+          {displayed_text.includes("Kesava Prakash") ? (
+            <>
+              A.K.A{" "}
+              <span style={{ color: "cyan" }}>{displayed_text.slice(6)}</span>
+            </>
+          ) : (
+            displayed_text
+          )}
+        </Typography>
+        <Button
+          variant="outlined"
+          onClick={cheers_function}
+          sx={{ marginBottom: "20px" }}
+        >
+          CHEERS
+        </Button>
       </Box>
-      </Box>
-      <Box sx={{ marginTop: 2, textAlign: "center" }}>
+
+      <Box>
         <img
           src={IMG_20240905_190702}
           alt="My image"
-          style={{ width: "100%", maxWidth: "400px", height: "auto" }}
+          style={{
+            width: "100%",
+            maxWidth: "550px",
+            height: "auto",
+            borderRadius: "10px",
+          }}
         />
       </Box>
-      
-    </div>
+    </Box>
   );
 };
 
