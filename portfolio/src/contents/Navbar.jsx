@@ -20,12 +20,12 @@ function Navbar() {
   };
 
   const navItems = [
-    "HOME",
-    "ABOUT",
-    "SKILLS",
-    "PROJECTS",
-    "EXPERIENCE",
-    "CONTACT",
+    { label: "HOME", href: "#home" },
+    { label: "ABOUT", href: "#about" },
+    { label: "SKILLS", href: "#skills" },
+    { label: "PROJECTS", href: "#projects" },
+    { label: "EXPERIENCE", href: "#experience" },
+    { label: "CONTACT", href: "#contact" },
   ];
 
   return (
@@ -33,8 +33,7 @@ function Navbar() {
       <AppBar
         position="fixed"
         sx={{
-          backgroundColor: "transparent",
-          backdropFilter: "blur(10px)",
+          backgroundColor: "black",
         }}
       >
         <Toolbar
@@ -45,7 +44,10 @@ function Navbar() {
         >
           {isMobile ? (
             <>
-              <Typography variant="h6" sx={{ fontFamily: "Helvetica Neue Medium" }}>
+              <Typography
+                variant="h6"
+                sx={{ fontFamily: "Helvetica Neue Medium" }}
+              >
                 Kesava Prakash
               </Typography>
               <IconButton
@@ -59,13 +61,18 @@ function Navbar() {
             </>
           ) : (
             navItems.map((item) => (
-              <Typography
-                key={item}
-                variant="subtitle1"
-                sx={{ fontFamily: "Helvetica Neue Medium" }}
+              <a
+                key={item.label}
+                href={item.href}
+                style={{ textDecoration: "none", color: "inherit" }}
               >
-                {item}
-              </Typography>
+                <Typography
+                  variant="subtitle1"
+                  sx={{ fontFamily: "Helvetica Neue Medium" }}
+                >
+                  {item.label}
+                </Typography>
+              </a>
             ))
           )}
         </Toolbar>
@@ -83,9 +90,15 @@ function Navbar() {
         }}
       >
         <List>
-          {navItems.map((text) => (
-            <ListItem button key={text} onClick={toggleDrawer(false)}>
-              <ListItemText primary={text} />
+          {navItems.map((item) => (
+            <ListItem
+              button
+              key={item.label}
+              component="a"
+              href={item.href}
+              onClick={toggleDrawer(false)}
+            >
+              <ListItemText primary={item.label} />
             </ListItem>
           ))}
         </List>
