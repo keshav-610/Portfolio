@@ -46,7 +46,10 @@ function Navbar() {
             <>
               <Typography
                 variant="h6"
-                sx={{ fontFamily: "Helvetica Neue Medium" }}
+                sx={{
+                  fontFamily: "Helvetica Neue Medium",
+                  color: "white", 
+                }}
               >
                 Kesava Prakash
               </Typography>
@@ -56,7 +59,7 @@ function Navbar() {
                 aria-label="menu"
                 onClick={toggleDrawer(true)}
               >
-                <MenuIcon />
+                <MenuIcon /> 
               </IconButton>
             </>
           ) : (
@@ -68,7 +71,7 @@ function Navbar() {
               >
                 <Typography
                   variant="subtitle1"
-                  sx={{ fontFamily: "Helvetica Neue Medium" }}
+                  sx={{ fontFamily: "Helvetica Neue Medium", color: "inherit" }}
                 >
                   {item.label}
                 </Typography>
@@ -83,9 +86,9 @@ function Navbar() {
         onClose={toggleDrawer(false)}
         PaperProps={{
           sx: {
-            backgroundColor: "black",
-            color: "white",
+            backgroundColor: "#030302",
             fontSize: "20px",
+            textDecoration:"none",
           },
         }}
       >
@@ -98,7 +101,7 @@ function Navbar() {
               href={item.href}
               onClick={toggleDrawer(false)}
             >
-              <ListItemText primary={item.label} />
+              <ListItemText primary={item.label} sx={{color:"white"}}/>
             </ListItem>
           ))}
         </List>
