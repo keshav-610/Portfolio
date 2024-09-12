@@ -1,30 +1,13 @@
-import { useEffect, useState } from "react";
 import { Box, Typography } from "@mui/material";
-import { useInView } from "react-intersection-observer"; 
 import About_Pic from "../assets/About_Pic.png";
 
 const About = () => {
-  const { ref: aboutRef, inView: isAboutInView } = useInView({
-    triggerOnce: true, 
-    threshold: 0.2, 
-  });
-
-  const [animate, setAnimate] = useState(false);
-
-  useEffect(() => {
-    if (isAboutInView) {
-      setAnimate(true);
-    }
-  }, [isAboutInView]);
 
   return (
-    <section id="about" ref={aboutRef}>
+    <section id="about">
       <Box
         sx={{
           backgroundColor: "#bce5f7",
-          opacity: animate ? 1 : 0, 
-          transform: animate ? "translateY(0)" : "translateY(100px)", 
-          transition: "opacity 1s ease, transform 1s ease",
         }}
       >
         <Box>
