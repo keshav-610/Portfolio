@@ -2,7 +2,6 @@ import { Box, Typography } from "@mui/material";
 import About_Pic from "../assets/About_Pic.png";
 
 const About = () => {
-
   return (
     <section id="about">
       <Box
@@ -17,18 +16,24 @@ const About = () => {
               variant="h4"
               sx={{
                 color: "#1a1919",
-                fontFamily: "Questrial, sans-serif",
-                fontWeight: "600",
+                fontFamily: "SF Pro Display Heavy, sans-serif",
+                fontWeight: "900",
                 textAlign: "center",
-                fontStyle: "normal",
-                fontSize: "50px",
+                fontSize: {
+                  xs: "33px",
+                  md: "50px",
+                },
                 textDecoration: "underline",
-                textDecorationColor: "yellow",
+                textDecorationColor: "#5793f2",
                 textUnderlineOffset: "10px",
+                transition: "text-decoration-color 0.3s ease",
+                fontStyle:"italic",
+                
               }}
             >
               About Me
             </Typography>
+
           </Box>
           <br />
           <Box
@@ -43,6 +48,7 @@ const About = () => {
                 display: "flex",
                 width: "90%",
                 flexDirection: { xs: "column", md: "row" },
+                gap: "40px",
               }}
             >
               <Box
@@ -57,34 +63,28 @@ const About = () => {
                 <Typography
                   sx={{
                     fontSize: {
-                      md: "1.5em",
+                      md: "1.52em",
                       xs: "1em",
                     },
-                    fontFamily: "SF Pro Display",
-                    fontWeight: "500",
+                    fontFamily: "SF Pro Display, sans-serif",
+                    fontStyle:"Italic",
+                    fontWeight:800,
+                    color: "#08193b",
                     lineHeight: {
-                      md: 2.3,
+                      md: 2.1,
                       xs: 2,
                     },
                   }}
                 >
                   I am a 21-year-old final year student at Vel Tech, with a
                   strong aspiration to excel in Machine Learning and Full Stack
-                  Development. With a solid foundation in UX Design and a
-                  passion for creating intuitive user experiences, I am eager to
-                  leverage my skills and knowledge in dynamic technologies. As
-                  my approach in my academic journey, I am actively seeking
-                  opportunities to enhance my expertise and contribute my
-                  potential in tech industry.
+                  Development. With a solid foundation in UX Designing and a
+                  passion for tech enthusiasm, I am eager to leverage my skills
+                  and knowledge in dynamic technologies. As my approach in my
+                  academic journey, I am actively seeking opportunities to
+                  enhance my expertise and contribute my potential in tech industry.
                 </Typography>
               </Box>
-              <Box
-                sx={{
-                  borderLeft: { xs: "none", md: "4px solid yellow" },
-                  height: "auto",
-                  mx: 2,
-                }}
-              />
               <Box
                 sx={{
                   display: { xs: "none", md: "block" },

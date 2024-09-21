@@ -148,38 +148,38 @@ const Name = () => {
           </Button>
           <Box sx={{ display: "flex", gap: "30px", marginTop: "20px" }}>
             <a href={social_link.facebook} target="_blank">
-            <FacebookIcon
-              sx={{
-                color: "white",
-                cursor: "pointer",
-                fontSize: {
-                  sx: "2rem",
-                  sm: "2.5em",
-                },
-                transition: "transform 0.3s, color 0.3s",
-                "&:hover": {
-                  transform: "scale(1.2)",
-                  color: "#0550ff",
-                },
-              }}
-            />
+              <FacebookIcon
+                sx={{
+                  color: "white",
+                  cursor: "pointer",
+                  fontSize: {
+                    sx: "2rem",
+                    sm: "2.5em",
+                  },
+                  transition: "transform 0.3s, color 0.3s",
+                  "&:hover": {
+                    transform: "scale(1.2)",
+                    color: "#0550ff",
+                  },
+                }}
+              />
             </a>
             <a href={social_link.x} target="_blank">
-            <XIcon
-              sx={{
-                color: "white",
-                cursor: "pointer",
-                fontSize: {
-                  sx: "2rem",
-                  sm: "2.5em",
-                },
-                transition: "transform 0.3s, color 0.3s",
-                "&:hover": {
-                  transform: "scale(1.2)",
-                  color: "#1DA1F2",
-                },
-              }}
-            />
+              <XIcon
+                sx={{
+                  color: "white",
+                  cursor: "pointer",
+                  fontSize: {
+                    sx: "2rem",
+                    sm: "2.5em",
+                  },
+                  transition: "transform 0.3s, color 0.3s",
+                  "&:hover": {
+                    transform: "scale(1.2)",
+                    color: "#1DA1F2",
+                  },
+                }}
+              />
             </a>
             <a href={social_link.instagram} target="_blank">
               <InstagramIcon
@@ -217,20 +217,19 @@ const Name = () => {
             </a>
             <a href={social_link.github} target="_blank">
               <GitHubIcon
-              sx={{
-                color:"white",
-                cursor: "pointer",
-                fontSize:{
-                  sx: "2rem",
-                  sm: "2.5em",
-                },
-                transition: "transform 0.3s, color 0.3s",
-                "&:hover":{
-                  transform: "scale(1.2)",
-                  color:"#9b34eb"
-                }
-
-              }}
+                sx={{
+                  color:"white",
+                  cursor: "pointer",
+                  fontSize:{
+                    sx: "2rem",
+                    sm: "2.5em",
+                  },
+                  transition: "transform 0.3s, color 0.3s",
+                  "&:hover":{
+                    transform: "scale(1.2)",
+                    color:"#9b34eb"
+                  }
+                }}
               />
             </a>
           </Box>
