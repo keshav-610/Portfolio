@@ -10,7 +10,8 @@ const Skillcard = ({ imgSrc, altText, header, percent }) => {
       },
       display: 'flex',
       flexDirection: "column",
-      marginBottom:"20px"
+      marginBottom:"35px",
+      gap:1.5
       
     }}
     >

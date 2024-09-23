@@ -18,16 +18,11 @@ const Skills = () => {
           backgroundColor: "white",
           backgroundImage: `linear-gradient(#cbcdd1 1px, transparent 1px), linear-gradient(90deg, #cbcdd1 1px, transparent 1px)`,
           backgroundSize: "40px 40px",
+          paddingTop: 3,
+          paddingBottom: 3,
         }}
       >
-        <Box sx={{padding:"15px"}}>
-          <Typography variant="h6" sx={{
-            textAlign:"center"
-          }}>
-            SKILLS
-          </Typography>
-        </Box>
-        <Box sx={{ paddingTop: "10px" }}>
+        <Box sx={{ paddingTop: "15px" }}>
           <Typography
             variant="h4"
             sx={{
@@ -37,11 +32,9 @@ const Skills = () => {
               textAlign: "center",
               textDecoration: "underline",
               textDecorationColor: "#1f53c2",
-              textUnderlineOffset: "10px",
+              textUnderlineOffset: "15px",
+              marginBottom: "35px",
               fontSize: { xs: "32px", md: "50px" },
-              "&:hover": {
-                textDecorationColor: "#ff5a5f",
-              },
             }}
           >
             Technical Expertise
@@ -55,8 +48,8 @@ const Skills = () => {
             flexWrap: "wrap",
             flexDirection: { xs: "column", md: "row" },
             width: "100%",
-            marginTop: "20px",
-            columnGap:{
+            paddingTop: 3,
+            columnGap: {
               md: 10,
             }
           }}

@@ -7,6 +7,8 @@ const About = () => {
       <Box
         sx={{
           backgroundColor: "#bce5f7",
+          paddingTop: 2,
+          paddingBottom: 3,
         }}
       >
         <Box>
@@ -27,8 +29,8 @@ const About = () => {
                 textDecorationColor: "#5793f2",
                 textUnderlineOffset: "10px",
                 transition: "text-decoration-color 0.3s ease",
-                fontStyle:"italic",
-                
+                fontStyle: "italic",
+
               }}
             >
               About Me
@@ -67,8 +69,8 @@ const About = () => {
                       xs: "1em",
                     },
                     fontFamily: "SF Pro Display, sans-serif",
-                    fontStyle:"Italic",
-                    fontWeight:800,
+                    fontStyle: "Italic",
+                    fontWeight: 800,
                     color: "#08193b",
                     lineHeight: {
                       md: 2.1,
