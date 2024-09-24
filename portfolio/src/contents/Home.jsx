@@ -7,10 +7,7 @@ function Home() {
     <section id="home">
       <Box
         sx={{
-          height: {
-            md: "86vh",
-            xs: "auto"
-          },
+          height:"auto",
           background: `linear-gradient(to right, rgba(127, 126, 126, 0.1) 1px, transparent 1px),
                      linear-gradient(to bottom, rgba(154, 152, 152, 0.1) 1px, transparent 1px),
                      rgb(27, 27, 26)`,
