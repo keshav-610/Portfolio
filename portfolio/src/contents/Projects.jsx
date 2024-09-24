@@ -71,14 +71,14 @@ const Projects = () => {
             image={chatbot}
             link="https://github.com/keshav-610/chatbot"
             header="Chatbot using AI and NLP"
-            description="This chatbot project uses a neural network for natural language processing. It includes a training script that preprocesses and trains a model to classify intents based on user input. The main chatbot script uses speech recognition and text-to-speech to interact with users, executing tasks like fetching time, date, or performing web searches."
+            description="The chatbot project uses a neural network for NLP, classifies intents from user input, and interacts using speech recognition and text-to-speech to perform tasks like fetching time or web searches."
             tools_used="Python, Pyttorch, Pyttsx3, Neural Network"
           />
           <ProjectCard
             image={hand_detection}
             link="https://github.com/keshav-610/hand-detection"
             header="Hand Detection using Mediapipe"
-            description="The project is made through OpenCV and MediaPipe to track and display hand landmarks in real-time from a webcam feed. It detects and highlights specific points, such as the tips of the index finger and thumb, and calculates the frames per second (FPS) for performance monitoring, visualizing the hand structure with landmarks and connections."
+            description="The project tracks and displays hand landmarks in real-time using OpenCV and MediaPipe, highlighting fingertips, calculating FPS, and visualizing the hand structure with landmarks and connections."
             tools_used="Python, Open CV, Mediapipe"
           />
         </Box>
