@@ -3,17 +3,17 @@ import { Box, Typography, LinearProgress } from "@mui/material";
 const Skillcard = ({ imgSrc, altText, header, percent }) => {
   return (
     <Box
-    sx={{
-      width:{
-        md:"35%",
-        xs:"70%"
-      },
-      display: 'flex',
-      flexDirection: "column",
-      marginBottom:"35px",
-      gap:1.5
-      
-    }}
+      sx={{
+        width: {
+          md: "35%",
+          xs: "70%"
+        },
+        display: 'flex',
+        flexDirection: "column",
+        marginBottom: "35px",
+        gap: 1.5
+
+      }}
     >
       <Box
         sx={{

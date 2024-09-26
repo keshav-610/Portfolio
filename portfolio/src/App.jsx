@@ -3,6 +3,8 @@ import Home from "./contents/Home";
 import About from "./contents/About";
 import Skills from "./contents/Skills";
 import Projects from "./contents/Projects";
+import Experience from "./contents/Experience";
+import Contact from "./contents/Contact";
 
 function App() {
   return (
@@ -11,7 +13,9 @@ function App() {
       <Home />
       <About />
       <Skills />
-      <Projects/>
+      <Projects />
+      <Experience />
+      <Contact />
     </main>
   );
 }

@@ -12,14 +12,14 @@ const ProjectCard = ({ image, link, header, description, tools_used }) => {
       boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
       marginBottom: "20px",
     }}>
-      <CardActionArea sx={{
+      <Box sx={{
         display: "flex",
         justifyContent: "space-between",
         flexDirection: "column",
-        minHeight:"440px"
+        minHeight:{md:"430px"}
       }} >
         <Box>
-          <CardMedia component="img" height="140" image={image} alt={header} />
+          <CardMedia component="img" height="140" image={image} alt={header} sx={{display:{xs:"none",md:"block"}}} />
           <CardContent>
             <Typography gutterBottom variant="h5" sx={{
               fontWeight: 700,
@@ -46,7 +46,7 @@ const ProjectCard = ({ image, link, header, description, tools_used }) => {
             Visit GitHub
           </Button>
         </Box>
-      </CardActionArea>
+      </Box>
 
     </Card>
   );

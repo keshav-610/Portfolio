@@ -22,7 +22,7 @@ const Skills = () => {
           paddingBottom: 3,
         }}
       >
-        <Box sx={{ paddingTop: "15px" }}>
+        <Box sx={{ paddingTop: "10px" }}>
           <Typography
             variant="h4"
             sx={{

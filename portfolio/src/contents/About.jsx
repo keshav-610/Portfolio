@@ -30,12 +30,11 @@ const About = () => {
                 textUnderlineOffset: "10px",
                 transition: "text-decoration-color 0.3s ease",
                 fontStyle: "italic",
-
+              
               }}
             >
               About Me
             </Typography>
-
           </Box>
           <br />
           <Box
@@ -88,6 +87,7 @@ const About = () => {
                 </Typography>
               </Box>
               <Box
+                className="animate__animated animate__fadeInUp"
                 sx={{
                   display: { xs: "none", md: "block" },
                   alignItems: "center",
