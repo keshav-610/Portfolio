@@ -9,6 +9,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const [email, setEmail] = useState("");
@@ -25,7 +26,7 @@ const Contact = () => {
     emailjs.send('service_mjssvts', 'template_5pqkgln', templateParams, 'ulGBMdxKs7GWi4dmd')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
-        alert("Message sent successfully!");
+        toast.success("Message sent successfully!");
       })
       .catch((err) => {
         console.error('FAILED...', err);
