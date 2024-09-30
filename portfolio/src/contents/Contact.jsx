@@ -13,15 +13,16 @@ import { toast } from "react-toastify";
 
 const Contact = () => {
   const [email, setEmail] = useState("");
+  const [name, setName] = useState(""); 
   const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const templateParams = {
-      from_email: email,
+      from_email: email,  
+      from_name: name,    
       message: message,
-      to_name: 'Recipient Name',
     };
 
     emailjs.send('service_mjssvts', 'template_5pqkgln', templateParams, 'ulGBMdxKs7GWi4dmd')
@@ -34,6 +35,7 @@ const Contact = () => {
         alert("Failed to send message. Please try again.");
       });
     setEmail("");
+    setName("");          
     setMessage("");
   };
 
@@ -105,7 +107,7 @@ const Contact = () => {
               </Typography>
             </Box>
             <Box sx={{ display: "flex", gap: 4, width: "auto" }}>
-              <a href={social_link.instagram} target="_blank">
+              <a href={social_link.instagram} target="_blank" rel="noopener noreferrer">
                 <InstagramIcon sx={{
                   color: "#86e7b8",
                   cursor: "pointer",
@@ -114,7 +116,7 @@ const Contact = () => {
                   "&:hover": { transform: "translateY(-5px)" },
                 }} />
               </a>
-              <a href={social_link.facebook} target="_blank">
+              <a href={social_link.facebook} target="_blank" rel="noopener noreferrer">
                 <FacebookIcon sx={{
                   color: "#86e7b8",
                   cursor: "pointer",
@@ -123,7 +125,7 @@ const Contact = () => {
                   "&:hover": { transform: "translateY(-5px)" },
                 }} />
               </a>
-              <a href={social_link.linked_in} target="_blank">
+              <a href={social_link.linked_in} target="_blank" rel="noopener noreferrer">
                 <LinkedInIcon sx={{
                   color: "#86e7b8",
                   cursor: "pointer",
@@ -132,7 +134,7 @@ const Contact = () => {
                   "&:hover": { transform: "translateY(-5px)" },
                 }} />
               </a>
-              <a href={social_link.github} target="_blank">
+              <a href={social_link.github} target="_blank" rel="noopener noreferrer">
                 <GitHubIcon sx={{
                   color: "#86e7b8",
                   cursor: "pointer",
@@ -141,7 +143,7 @@ const Contact = () => {
                   "&:hover": { transform: "translateY(-5px)" },
                 }} />
               </a>
-              <a href={social_link.x} target="_blank">
+              <a href={social_link.x} target="_blank" rel="noopener noreferrer">
                 <XIcon sx={{
                   color: "#86e7b8",
                   cursor: "pointer",
@@ -182,6 +184,24 @@ const Contact = () => {
             }}
           >
             <TextField
+              label="Your Name" // New field for sender's name
+              variant="outlined"
+              fullWidth
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              InputProps={{ style: { color: '#FFF' } }}
+              InputLabelProps={{ style: { color: '#86e7b8' } }}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": { borderColor: '#86e7b8' },
+                  "&:hover fieldset": { borderColor: '#72d0a6' },
+                  "&.Mui-focused fieldset": { borderColor: '#72d0a6' },
+                },
+                width: "70%",
+              }}
+            />
+            <TextField
               label="Your Email"
               variant="outlined"
               fullWidth
@@ -200,14 +220,14 @@ const Contact = () => {
               }}
             />
             <TextField
-              label="Your Message"
+              label="Message"
               variant="outlined"
-              multiline
-              rows={4}
               fullWidth
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
+              multiline
+              rows={4}
               InputProps={{ style: { color: '#FFF' } }}
               InputLabelProps={{ style: { color: '#86e7b8' } }}
               sx={{
@@ -224,9 +244,10 @@ const Contact = () => {
               variant="contained"
               sx={{
                 backgroundColor: "#86e7b8",
-                color: "#012622",
-                fontWeight: 600,
-                "&:hover": { backgroundColor: "#72d0a6" },
+                color: "#000",
+                "&:hover": {
+                  backgroundColor: "#72d0a6"
+                },
               }}
             >
               Send Message
