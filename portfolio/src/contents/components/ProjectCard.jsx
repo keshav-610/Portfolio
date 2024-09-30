@@ -11,6 +11,11 @@ const ProjectCard = ({ image, link, header, description, tools_used }) => {
       borderRadius: "10px",
       boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
       marginBottom: "20px",
+      transition: "transform 0.3s",
+      cursor: "pointer",
+      "&:hover": {
+        transform: "translateY(-20px)" 
+      }
     }}>
       <Box sx={{
         display: "flex",
