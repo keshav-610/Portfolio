@@ -21,6 +21,7 @@ const Contact = () => {
     const templateParams = {
       from_email: email,
       message: message,
+      to_name: 'Recipient Name',
     };
 
     emailjs.send('service_mjssvts', 'template_5pqkgln', templateParams, 'ulGBMdxKs7GWi4dmd')
@@ -113,7 +114,7 @@ const Contact = () => {
                   "&:hover": { transform: "translateY(-5px)" },
                 }} />
               </a>
-              <a href={social_link.facebook}>
+              <a href={social_link.facebook} target="_blank">
                 <FacebookIcon sx={{
                   color: "#86e7b8",
                   cursor: "pointer",
@@ -122,7 +123,7 @@ const Contact = () => {
                   "&:hover": { transform: "translateY(-5px)" },
                 }} />
               </a>
-              <a href={social_link.linked_in}>
+              <a href={social_link.linked_in} target="_blank">
                 <LinkedInIcon sx={{
                   color: "#86e7b8",
                   cursor: "pointer",
@@ -131,7 +132,7 @@ const Contact = () => {
                   "&:hover": { transform: "translateY(-5px)" },
                 }} />
               </a>
-              <a href={social_link.github}>
+              <a href={social_link.github} target="_blank">
                 <GitHubIcon sx={{
                   color: "#86e7b8",
                   cursor: "pointer",
@@ -140,7 +141,7 @@ const Contact = () => {
                   "&:hover": { transform: "translateY(-5px)" },
                 }} />
               </a>
-              <a href={social_link.x}>
+              <a href={social_link.x} target="_blank">
                 <XIcon sx={{
                   color: "#86e7b8",
                   cursor: "pointer",
