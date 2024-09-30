@@ -46,7 +46,7 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <Box sx={{ backgroundColor: "#0F1214", paddingTop:5,paddingBottom:8}}>
+      <Box sx={{ backgroundColor: "#0F1214", paddingTop: 5, paddingBottom: 8 }}>
         <Box sx={{ marginBottom: 2, textAlign: 'center' }}>
           <Typography
             sx={{
@@ -54,7 +54,6 @@ const Contact = () => {
               fontFamily: "SF Pro Display, sans-serif",
               fontSize: { md: 40, xs: 30 },
               fontWeight: 600,
-              
             }}
           >
             Contact Me
@@ -67,22 +66,26 @@ const Contact = () => {
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
             gap: 2,
+            maxWidth: { xs: "100%", md: "80%" }, 
+            margin: "0 auto",
           }}
         >
-          <Box sx={{
-            flex: 1,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            gap: 3,
-            padding: 2,
-            paddingLeft:10
-          }}>
+          <Box
+            sx={{
+              flex: 1,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              gap: 3,
+              padding: 2,
+              paddingLeft: { xs: 2, md: 10 },
+            }}
+          >
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <LocalPhoneRoundedIcon sx={{ color: "#86e7b8", fontSize: "2em" }} />
               <Typography variant="h6" sx={{
                 color: "#FAF9F6",
-                fontSize: "20px",
+                fontSize: {xs:"1.2em",md:"1.5em"},
                 fontWeight: 600,
                 marginLeft: "10px",
               }}>
@@ -93,7 +96,7 @@ const Contact = () => {
               <EmailRoundedIcon sx={{ color: "#86e7b8", fontSize: "2em" }} />
               <Typography variant="h6" sx={{
                 color: "#FAF9F6",
-                fontSize: "20px",
+                fontSize: {xs:"1.2em",md:"1.5em"},
                 fontWeight: 600,
                 marginLeft: "10px",
               }}>
@@ -174,6 +177,7 @@ const Contact = () => {
               alignItems: 'center',
               marginTop: 3,
               gap: 2,
+              maxWidth: { xs: "100%", md: "70%" },
             }}
           >
             <TextField
