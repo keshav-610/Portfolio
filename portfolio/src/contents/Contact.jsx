@@ -184,7 +184,7 @@ const Contact = () => {
             }}
           >
             <TextField
-              label="Your Name" // New field for sender's name
+              label="Your Name"
               variant="outlined"
               fullWidth
               value={name}
