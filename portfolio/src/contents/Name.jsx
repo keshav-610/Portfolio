@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button, Typography, Box } from "@mui/material";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import IMG_20240905_190702 from "../assets/IMG_20240905_190702.jpg";
+import Profile from "../assets/Profile.jpg"
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -238,7 +238,7 @@ const Name = () => {
 
       <Box>
         <img
-          src={IMG_20240905_190702}
+          src={Profile}
           alt="My image"
           style={{
             width: "100%",
