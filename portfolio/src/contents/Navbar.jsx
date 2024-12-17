@@ -22,11 +22,26 @@ function Navbar() {
   const navItems = [
     { label: "HOME", href: "#home" },
     { label: "ABOUT", href: "#about" },
+    { label: "EDUCATION", href: "#education" },
     { label: "SKILLS", href: "#skills" },
     { label: "PROJECTS", href: "#projects" },
     { label: "EXPERIENCE", href: "#experience" },
     { label: "CONTACT", href: "#contact" },
   ];
+
+  const handleScroll = (id) => (event) => {
+    event.preventDefault();
+    const targetElement = document.querySelector(id);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+    if (isMobile) {
+      setDrawerOpen(false);
+    }
+  };
 
   return (
     <>
@@ -48,7 +63,7 @@ function Navbar() {
                 variant="h6"
                 sx={{
                   fontFamily: "Helvetica Neue Medium",
-                  color: "white", 
+                  color: "white",
                 }}
               >
                 Kesava Prakash
@@ -59,23 +74,23 @@ function Navbar() {
                 aria-label="menu"
                 onClick={toggleDrawer(true)}
               >
-                <MenuIcon /> 
+                <MenuIcon />
               </IconButton>
             </>
           ) : (
             navItems.map((item) => (
-              <a
+              <Typography
                 key={item.label}
-                href={item.href}
-                style={{ textDecoration: "none", color: "inherit" }}
+                variant="subtitle1"
+                sx={{
+                  fontFamily: "Helvetica Neue Medium",
+                  color: "inherit",
+                  cursor: "pointer",
+                }}
+                onClick={handleScroll(item.href)}
               >
-                <Typography
-                  variant="subtitle1"
-                  sx={{ fontFamily: "Helvetica Neue Medium", color: "inherit" }}
-                >
-                  {item.label}
-                </Typography>
-              </a>
+                {item.label}
+              </Typography>
             ))
           )}
         </Toolbar>
@@ -88,7 +103,7 @@ function Navbar() {
           sx: {
             backgroundColor: "#030302",
             fontSize: "20px",
-            textDecoration:"none",
+            textDecoration: "none",
           },
         }}
       >
@@ -97,11 +112,9 @@ function Navbar() {
             <ListItem
               button
               key={item.label}
-              component="a"
-              href={item.href}
-              onClick={toggleDrawer(false)}
+              onClick={handleScroll(item.href)}
             >
-              <ListItemText primary={item.label} sx={{color:"white"}}/>
+              <ListItemText primary={item.label} sx={{ color: "white" }} />
             </ListItem>
           ))}
         </List>

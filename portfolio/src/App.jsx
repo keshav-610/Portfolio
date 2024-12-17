@@ -5,6 +5,7 @@ import Skills from "./contents/Skills";
 import Projects from "./contents/Projects";
 import Experience from "./contents/Experience";
 import Contact from "./contents/Contact";
+import Education from "./contents/Education";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <Home />
       <About />
+      <Education/>
       <Skills />
       <Projects />
       <Experience />

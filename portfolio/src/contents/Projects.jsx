@@ -4,8 +4,8 @@ import Bank_Mgmt from "../assets/Bank_Mgmt.jpg";
 import emplyoyee_tt_logo from "../assets/employee_tt_logo.png";
 import connect_4 from "../assets/connect__4.jpeg";
 import CGPA_Calculator from "../assets/CGPA_Calculator.jpg";
-import chatbot from "../assets/chatbot.png";
 import hand_detection from "../assets/hand_detection.png";
+import Book_Store_MERN from "../assets/Book_Store_MERN.jpg";
 
 const Projects = () => {
   return (
@@ -41,7 +41,7 @@ const Projects = () => {
             gridTemplateColumns: {
               xs: "1fr",
               sm: "repeat(2, 1fr)",
-              md: "repeat(3, 1fr)" 
+              md: "repeat(3, 1fr)"
             },
             gap: 2,
             justifyItems: "center",
@@ -49,6 +49,13 @@ const Projects = () => {
             mx: { xs: "40px", md: "0" }
           }}
         >
+          <ProjectCard
+            image={Book_Store_MERN}
+            link="https://github.com/keshav-610/book-store-mern"
+            header="Book Store using MERN"
+            description="A full-stack book store app with authentication, CRUD features, and a responsive UI built using the MERN stack."
+            tools_used="Vite JS, Mongo DB, Express, Redux, Firebase, JWT, Tailwind CSS."
+          />
           <ProjectCard
             image={Bank_Mgmt}
             link="https://github.com/keshav-610/bank_management11-7"
@@ -76,13 +83,6 @@ const Projects = () => {
             header="CGPA Calculator through React Native"
             description="This project is done through React Native to calculate the CGPA of a student and GPA of a semester."
             tools_used="React Native"
-          />
-          <ProjectCard
-            image={chatbot}
-            link="https://github.com/keshav-610/chatbot"
-            header="Chatbot using AI and NLP"
-            description="The chatbot project uses a neural network for NLP, classifies intents from user input, and interacts using speech recognition and text-to-speech to perform tasks like fetching time or web searches."
-            tools_used="Python, PyTorch, Pyttsx3, Neural Network"
           />
           <ProjectCard
             image={hand_detection}
